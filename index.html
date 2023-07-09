@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Girlfriend's Website</title>
+    <title>Happy Birthday Website</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
 	
@@ -12,7 +12,7 @@
 	
 	<div id="yincang">
 		<header>
-		    <h1>Welcome to Your Girlfriend's Website</h1>
+		    <h1>Welcome to Birthday Website</h1>
 		    <nav>
 		        <ul>
 		            <li><a href="#">Home</a></li>
@@ -54,12 +54,19 @@
         var idInput = document.getElementById("id").value;
 
         // Perform passcode and ID verification
-        if (passcodeInput === "username" && idInput === "id_get") {
+        if (passcodeInput === "Doris_happy" && idInput === "Doris_thin") {
 			
             document.getElementById("success-message").textContent = "Login successful!";
             document.getElementById("success-message").style.display = "block";
 
-            var words = "一些中文。。。。。。。。";
+            var words = "见字如面啦，老阿姨，啊不，方蓓蓓同学，祝你生日快乐，岁岁安康，平安喜乐。" +
+                    "每一天都像过生日一样开心，幸福，经常有惊喜，生活充满仪式感。" +
+                    "记得之前你聊到过世界森罗万象，值得去探索，我也这么觉得，因为各个领域都蛮有意思的！" +
+                    "一个个去体验的感觉也很好，每一个开始都会有很奇妙的感觉，虽然我大部分还都停留在了皮毛阶段QAQ。"
+                    "有时候会想跟你分享这些感觉，但不知道你会不会愿意听这些，但祝愿你新的一年会有更多彩的经历，留下更多有趣的回忆。" +
+                    "其实吧，我一直有点社恐，不太会说话，但还是很期待你们分享日常，" +
+                    "比如：‘王鹤棣老婆‘。我没说是谁的梗奥！" +
+                    "最后的最后，还是祝你一直开心，无忧无虑，身体健康，万事如意";
 
             // Hide the login section
             document.querySelector(".login-section").style.display = "none";
