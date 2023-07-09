@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Girlfriend's Website</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Girlfriend's Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </nav>
+    </header>
+		
+    <main>
+		 <div id="typed-words"></div>
+        <section class="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="passcode">Enter Passcode:</label>
+                <input type="password" id="passcode" name="passcode">
+                <label for="id">Enter ID:</label>
+                <input type="text" id="id" name="id">
+                <button type="submit">Login</button>
+            </form>
+            <div id="success-message">1111111111111</div>
+          
+        </section>
+    </main>
+
+    <footer class="footer">
+        <!-- Include a footer section here -->
+    </footer>
+   <script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var passcodeInput = document.getElementById("passcode").value;
+        var idInput = document.getElementById("id").value;
+
+        // Perform passcode and ID verification
+        if (passcodeInput === "username" && idInput === "id_get") {
+			
+            document.getElementById("success-message").textContent = "Login successful!";
+            document.getElementById("success-message").style.display = "block";
+
+            var words = "一些中文。。。。。。。。";
+
+            // Hide the login section
+            document.querySelector(".login-section").style.display = "none";
+			
+			// Hide the login section
+			document.querySelector(".footer").style.display = "none";
+
+            // Set the second background image
+            document.body.style.backgroundImage = "url('birthday2.png')";
+
+            // Show the typed-words element
+            var typedWords = document.getElementById("typed-words");
+            typedWords.style.display = "block";
+
+          
+            typedWords.style.color = "#ffffff";
+            typedWords.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+            var index = 0;
+            var intervalId = setInterval(function() {
+                if (index < words.length) {
+                    typedWords.textContent += words.charAt(index);
+                    index++;
+                } else {
+                    clearInterval(intervalId);
+					
+					
+					
+                }
+            }, 190);
+			
+			
+			
+			
+			
+			
+			
+           } else {
+            document.getElementById("success-message").textContent = "Invalid passcode or ID. Please try again.";
+            document.getElementById("success-message").style.display = "block";
+          }
+       });
+   </script>
+ 
+
+
+
+</body>
+</html>
